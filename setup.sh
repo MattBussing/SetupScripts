@@ -1,6 +1,12 @@
+<<'comment'
+Other things needed to be done:
+1. Setup mirrors by going to settings-> Software & Updates -> Download...:
+    choose best server.
+2.
+comment
 #<<'comment'
 sudo apt-get update
-sudo apt-get upgrade
+sudo apt-get upgrade -y
 #install packages needed for other programs
 sudo apt-get install git curl -y
 
@@ -26,6 +32,6 @@ sudo sh -c 'echo "deb [arch=amd64] https://packagecloud.io/AtomEditor/atom/any/ 
 
 #update packages
 sudo apt-get update
-sudo apt-get install atom vim google-chrome-stable openvpn -y
+sudo apt-get install atom vim google-chrome-stable openvpn python3-pip gcc g++ -y
 
 #comment
