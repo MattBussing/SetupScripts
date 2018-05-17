@@ -4,7 +4,11 @@ Other things needed to be done:
     choose best server.
 2. Change background
 comment
-#<<'comment'
+
+bash remove.sh
+
+<<'comment'
+
 sudo apt-get update
 sudo apt-get upgrade -y
 #install packages needed for other programs
@@ -34,4 +38,4 @@ sudo sh -c 'echo "deb [arch=amd64] https://packagecloud.io/AtomEditor/atom/any/ 
 sudo apt-get update
 sudo apt-get install atom vim google-chrome-stable openvpn -y
 # sudo apt-get install python3-pip gcc g++ -y
-#comment
+comment
