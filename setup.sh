@@ -5,28 +5,24 @@ Other things needed to be done:
 2. Change background
 comment
 
+#remove unwanted programs
 bash remove.sh
 
-<<'comment'
-
+#update everything
 sudo apt-get update
 sudo apt-get upgrade -y
+sudo apt-get dist-upgrade
+sudo apt-get full-upgrade
+
 #install packages needed for other programs
 sudo apt-get install git curl -y
 
-#comment
-
 #git setup
-sudo chmod +x gitSetup.sh
-./gitSetup.sh
+bash gitSetup.sh
+#git setup
+bash directorySetup.sh
 
-#git folder setup
-sudo chmod +x directorySetup.sh
-./directorySetup.sh
-
-#<<'comment'
-
-#chrome setup
+#chrome repo setup
 wget -q -O - https://dl-ssl.google.com/linux/linux_signing_key.pub | sudo apt-key add -
 echo 'deb [arch=amd64] http://dl.google.com/linux/chrome/deb/ stable main' | sudo tee /etc/apt/sources.list.d/google-chrome.list
 
@@ -34,8 +30,9 @@ echo 'deb [arch=amd64] http://dl.google.com/linux/chrome/deb/ stable main' | sud
 curl -L https://packagecloud.io/AtomEditor/atom/gpgkey | sudo apt-key add -
 sudo sh -c 'echo "deb [arch=amd64] https://packagecloud.io/AtomEditor/atom/any/ any main" > /etc/apt/sources.list.d/atom.list'
 
-#update packages
-sudo apt-get update
-sudo apt-get install atom vim google-chrome-stable openvpn -y
+#install packages
+sudo apt-get -y install atom vim google-chrome-stable openvpn
+#install spotify
+snap install spotify
+
 # sudo apt-get install python3-pip gcc g++ -y
-comment
