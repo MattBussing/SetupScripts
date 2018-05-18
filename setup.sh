@@ -15,12 +15,7 @@ sudo apt-get dist-upgrade
 sudo apt-get full-upgrade
 
 #install packages needed for other programs
-sudo apt-get install -y git curl
-
-#git setup
-bash gitSetup.sh
-#git setup
-bash directorySetup.sh
+sudo apt-get install -y curl
 
 #chrome repo setup
 wget -q -O - https://dl-ssl.google.com/linux/linux_signing_key.pub | sudo apt-key add -
@@ -31,8 +26,13 @@ curl -L https://packagecloud.io/AtomEditor/atom/gpgkey | sudo apt-key add -
 sudo sh -c 'echo "deb [arch=amd64] https://packagecloud.io/AtomEditor/atom/any/ any main" > /etc/apt/sources.list.d/atom.list'
 
 #install packages
-sudo apt-get -y install atom vim google-chrome-stable openvpn
+sudo apt-get -y install git atom vim google-chrome-stable openvpn
 #install spotify
 sudo snap install spotify
 
 # sudo apt-get install python3-pip gcc g++ -y
+
+#git setup
+bash gitSetup.sh
+#git setup
+bash directorySetup.sh
