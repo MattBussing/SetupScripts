@@ -15,7 +15,7 @@ sudo apt-get dist-upgrade
 sudo apt-get full-upgrade
 
 #install packages needed for other programs
-sudo apt-get install git curl -y
+sudo apt-get install -y git curl
 
 #git setup
 bash gitSetup.sh
@@ -33,6 +33,6 @@ sudo sh -c 'echo "deb [arch=amd64] https://packagecloud.io/AtomEditor/atom/any/ 
 #install packages
 sudo apt-get -y install atom vim google-chrome-stable openvpn
 #install spotify
-snap install spotify
+sudo snap install spotify
 
 # sudo apt-get install python3-pip gcc g++ -y
