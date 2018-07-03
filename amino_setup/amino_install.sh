@@ -1,4 +1,4 @@
-#run via bahs amino_install.sh
+#run via "bash amino_install.sh"
 
 sudo apt-get update
 sudo apt-get -y upgrade
