@@ -1,8 +1,0 @@
-name: research
-channels:
-  - defaults
-dependencies:
-  - python=2.7
-  - pip
-  - pip:
-prefix: /anaconda3/envs/research
