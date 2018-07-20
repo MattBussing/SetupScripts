@@ -10,3 +10,9 @@
   - system settings
   - bash aliases file
   - atom settings
+
+## General Tips:
+
+Run all files using `bash [file name]`
+Run main.sh to have generic setup
+Run amino_install.sh to install amino (http://amino.golems.org/installation.html)
