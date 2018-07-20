@@ -1,5 +1,6 @@
 #!/usr/bin/env bash
 # author: Matt Bussing
+# http://amino.golems.org/installation.html
 
 <<'notes'
 Changed libav-tools to ffmpeg
@@ -34,13 +35,11 @@ if [ ! -d "amino" ]; then
     git clone --recursive https://github.com/golems/amino.git
 fi
 
-# http://amino.golems.org/installation.html
-bash quicklisp.sh
+bash ../quicklisp.sh
 
-<<'paste'
-Paste this into terminal for final install
 cd amino
-cd tmsmt && autoreconf -i don't know if this is needed
-./configure && make && make install
-
-paste
+git submodule init && git submodule update && autoreconf -i
+./configure
+make
+sudo make install
+# uninstall "make uninstall
