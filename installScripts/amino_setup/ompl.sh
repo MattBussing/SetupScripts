@@ -7,6 +7,9 @@ chmod u+x install-ompl-ubuntu.sh
 ./install-ompl-ubuntu.sh --app will install OMPL.app with Python bindings
 notes
 
-./install-ompl-ubuntu.sh --python
+./install-ompl-ubuntu.sh
 
 rm install-ompl-ubuntu.sh
+# create links for eigen for later use
+sudo ln -sf eigen3/Eigen /usr/local/include/Eigen
+sudo ln -sf eigen3/unsupported /usr/local/include/unsupported

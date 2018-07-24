@@ -21,7 +21,13 @@ if [ "$answer" != "${answer#[Yy]}" ]; then
         coinor-libclp-dev libglpk-dev liblpsolve55-dev
 fi
 
-bash ompl.sh
+echo -n "Build OMPL from source? (y/n) "
+read answer
+# install dependecies
+if [ "$answer" != "${answer#[Yy]}" ]; then
+    bash ompl.sh
+fi
+
 ##### testing ###
 # cd $HOME/git
 # TODO fix install location
