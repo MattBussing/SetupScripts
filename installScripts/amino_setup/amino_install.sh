@@ -91,10 +91,6 @@ if [ "$answer" != "${answer#[Yy]}" ]; then
     make
     sudo make install
 
-    find ./demo -type f -executable \
-    -not  -name '*.so' \
-    -not -path '*.libs*'
-
     echo -n "Open static demo? "
     read answer
     # install dependecies
@@ -108,4 +104,10 @@ if [ "$answer" != "${answer#[Yy]}" ]; then
     if [ "$answer" != "${answer#[Yy]}" ]; then
         ./demo/urdf/baxter-ompl-sequence
     fi
+
+    echo "Here are all the demos"
+    find ./demo -type f -executable \
+    -not  -name '*.so' \
+    -not -path '*.libs*'
+
 fi
