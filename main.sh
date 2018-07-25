@@ -6,7 +6,7 @@ Other things needed to be done:
 comment
 
 #remove unwanted programs
-bash remove.sh
+bash removeScripts/rGeneral.sh
 
 #update everything
 sudo apt-get update
