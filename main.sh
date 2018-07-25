@@ -1,10 +1,3 @@
-<<'comment'
-Other things needed to be done:
-1. Setup mirrors by going to settings-> Software & Updates -> Download...:
-    choose best server.
-2. Change background
-comment
-
 #remove unwanted programs
 bash removeScripts/rGeneral.sh
 

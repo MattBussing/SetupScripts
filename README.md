@@ -6,6 +6,9 @@
   - printer support
   - remove personal information
   - program flow
+  - Setup mirrors by going to settings-> Software & Updates -> Download...:
+      choose best server.
+  - Change background
 ### add settings
   - chrome
   - system settings
