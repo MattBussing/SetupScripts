@@ -1,3 +1,8 @@
+# saves where the script is
+SCRIPT=$PWD
+export SCRIPT
+# installs ompl at home
+cd $HOME
 rm install-ompl-ubuntu.sh
 wget http://ompl.kavrakilab.org/core/install-ompl-ubuntu.sh
 chmod u+x install-ompl-ubuntu.sh
@@ -18,3 +23,4 @@ echo "compiling test program to check for errors"
 g++ progam.cpp -o my_program
 ./my_program
 echo "did it compile and run?"
+cd $SCRIPT
