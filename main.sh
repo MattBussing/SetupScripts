@@ -18,15 +18,19 @@ function removePrograms {
     ask "Remove Docker?" removeDocker
 }
 
-function installPrograms {
-    ask "Set up Chrome?" setupChrome
-    ask "Set up Atom?" setupAtom
-    sudo apt-get update
+function installGeneralPrograms {
     declare -a unwanted=(curl git atom vim google-chrome-stable openvpn python3-pip gcc g++ texmaker texlive okular)
     for i in "${unwanted[@]}"
     do
         sudo apt-get -y install $i
     done
+}
+
+function installPrograms {
+    ask "Set up Chrome?" setupChrome
+    ask "Set up Atom?" setupAtom
+    sudo apt-get update
+    ask "Install General Programs?" installGeneralPrograms 
     sudo snap install spotify
     ask "Install Postman?" installPostman
     ask "Install Inkscape?" installInkscape

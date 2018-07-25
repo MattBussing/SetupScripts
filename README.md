@@ -4,8 +4,6 @@
   - jupyter notebook setup
   - teamviewer
   - printer support
-  - remove personal information
-  - program flow
   - Setup mirrors by going to settings-> Software & Updates -> Download...:
       choose best server.
   - Change background
@@ -16,7 +14,5 @@
   - atom settings
 
 ## General Tips:
-
-Run all files using `bash [file name]`
-Run main.sh to have generic setup
-Run amino_install.sh to install amino (http://amino.golems.org/installation.html)
+  - `bash main.sh` to have generic setup
+  - `bash amino_install.sh` to install amino (http://amino.golems.org/installation.html)
