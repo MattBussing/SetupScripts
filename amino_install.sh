@@ -98,7 +98,7 @@ function runDemo {
 }
 
 ################ main ############################
-echo -n "Update packages? "
+echo -n "Update packages? (y/n) "
 read answer
 # install dependecies
 if [ "$answer" != "${answer#[Yy]}" ]; then
@@ -112,10 +112,10 @@ if [ "$answer" != "${answer#[Yy]}" ]; then
         coinor-libclp-dev libglpk-dev liblpsolve55-dev
 fi
 
-run  "Build OMPL from source? " omplInstall
-run  "Install quickLisp? Be careful. If it is already installed it will not reinstall this way " quicklispInstall
+run  "Build OMPL from source?" omplInstall
+run  "Install quickLisp? Be careful. If it is already installed it will not reinstall this way" quicklispInstall
 
-echo -n "Update or clone amino's repo? "
+echo -n "Update or clone amino's repo? (y/n) "
 read answer
 if [ "$answer" != "${answer#[Yy]}" ]; then
     cd $HOME
@@ -132,11 +132,11 @@ fi
 
 run "Build amino without demos? " installAmino n
 
-echo -n "Build amino with demos? "
+echo -n "Build amino with demos? (y/n) "
 read answer
 if [ "$answer" != "${answer#[Yy]}" ]; then
     cd $HOME
-    echo -n "update or clone baxter_common? "
+    echo -n "update or clone baxter_common? (y/n) "
     read answer
     if [ "$answer" != "${answer#[Yy]}" ]; then
         if [ ! -d "baxter_common" ]; then
