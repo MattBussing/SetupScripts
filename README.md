@@ -5,7 +5,8 @@
   - teamviewer
   - printer support
   - remove personal information
-### settings
+  - program flow
+### add settings
   - chrome
   - system settings
   - bash aliases file
