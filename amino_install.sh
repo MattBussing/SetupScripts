@@ -8,6 +8,8 @@ installs all files at home
 Changed libav-tools to ffmpeg
 Compiled ompl from source
 emacs is currently a dependency
+ROS_PACKAGE_PATH has to be the first baxter_common not the second
+
 
 ompl notes
 ./install-ompl-ubuntu.sh will install OMPL without Python bindings
@@ -133,8 +135,6 @@ fi
 
 run "Build amino without demos? (y/n) " installAmino n
 
-#fix this
-
 echo -n "Build amino with demos? (y/n) "
 read answer
 if [ "$answer" != "${answer#[Yy]}" ]; then
@@ -145,14 +145,12 @@ if [ "$answer" != "${answer#[Yy]}" ]; then
         if [ ! -d "baxter_common" ]; then
             echo "downloading baxter"
             git clone https://github.com/RethinkRobotics/baxter_common
-            cd baxter_common
         else
             cd baxter_common
             git pull
         fi
-    else
-        cd baxter_common
     fi
+    cd $HOME
     ROS_PACKAGE_PATH=`pwd`/baxter_common
     export ROS_PACKAGE_PATH
 
