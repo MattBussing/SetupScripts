@@ -27,3 +27,4 @@ g++ progam.cpp -o my_program
 ./my_program
 echo "did it compile and run?"
 read answer
+rm my_program
