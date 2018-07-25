@@ -67,10 +67,9 @@ function quicklispInstall {
 }
 
 function run {
-    echo -n $1
+    echo -n "$1 (y/n) "
     read answer
     if [ "$answer" != "${answer#[Yy]}" ]; then
-        echo "$2 $3 $4"
         $2 $3 $4
     fi
 }
@@ -78,11 +77,9 @@ function run {
 function installAmino {
     cd $HOME/amino
     if [ "$1" != "${answer#[Yy]}" ]; then
-        echo "demos"
-        run  "configure? (y/n)" ./configure --enable-demos --enable-demo-baxter
+        run  "configure? " ./configure --enable-demos --enable-demo-baxter
     else
-        echo "no demos"
-        run  "configure? (y/n)" ./configure
+        run  "configure? " ./configure
     fi
     echo "Check to see if configured properly. Press any key to continue"
     read answer
@@ -101,7 +98,7 @@ function runDemo {
 }
 
 ################ main ############################
-echo -n "Update packages? (y/n) "
+echo -n "Update packages? "
 read answer
 # install dependecies
 if [ "$answer" != "${answer#[Yy]}" ]; then
@@ -115,10 +112,10 @@ if [ "$answer" != "${answer#[Yy]}" ]; then
         coinor-libclp-dev libglpk-dev liblpsolve55-dev
 fi
 
-run  "Build OMPL from source? (y/n) " omplInstall
-run  "Install quickLisp? Be careful. If it is already installed it will not reinstall this way (y/n) " quicklispInstall
+run  "Build OMPL from source? " omplInstall
+run  "Install quickLisp? Be careful. If it is already installed it will not reinstall this way " quicklispInstall
 
-echo -n "Update or clone amino's repo? (y/n) "
+echo -n "Update or clone amino's repo? "
 read answer
 if [ "$answer" != "${answer#[Yy]}" ]; then
     cd $HOME
@@ -133,13 +130,13 @@ if [ "$answer" != "${answer#[Yy]}" ]; then
     git submodule init && git submodule update && autoreconf -i
 fi
 
-run "Build amino without demos? (y/n) " installAmino n
+run "Build amino without demos? " installAmino n
 
-echo -n "Build amino with demos? (y/n) "
+echo -n "Build amino with demos? "
 read answer
 if [ "$answer" != "${answer#[Yy]}" ]; then
     cd $HOME
-    echo -n "update or clone baxter_common? (y/n) "
+    echo -n "update or clone baxter_common? "
     read answer
     if [ "$answer" != "${answer#[Yy]}" ]; then
         if [ ! -d "baxter_common" ]; then
