@@ -2,6 +2,9 @@
 # author: Matt Bussing
 # modified from http://amino.golems.org/installation.html
 
+###### This needs to be ran from the directory it is in (cd SetupScripts/installScripts/amino_setup) #########
+
+
 <<'notes'
 run this in amino_install.sh directory
 installs all files at home
@@ -25,14 +28,12 @@ fi
 
 echo -n "Build OMPL from source? (y/n) "
 read answer
-# install dependecies
 if [ "$answer" != "${answer#[Yy]}" ]; then
     bash ompl.sh
 fi
 
 echo -n "Install quickLisp? (y/n) "
 read answer
-# install dependecies
 if [ "$answer" != "${answer#[Yy]}" ]; then
     bash quicklisp.sh
     rm quicklisp.lisp
@@ -42,7 +43,6 @@ cd $HOME
 
 echo -n "Update/ clone amino's repo? (y/n) "
 read answer
-# install dependecies
 if [ "$answer" != "${answer#[Yy]}" ]; then
     if [ ! -d "amino" ]; then
         echo "downloading amino"
@@ -50,13 +50,12 @@ if [ "$answer" != "${answer#[Yy]}" ]; then
     else
         cd amino
         git pull
-        git submodule init && git submodule update && autoreconf -i
     fi
+    git submodule init && git submodule update && autoreconf -i
 fi
 
 echo -n "Build amino without demos? (y/n) "
 read answer
-# install dependecies
 if [ "$answer" != "${answer#[Yy]}" ]; then
     cd $HOME/amino
     ./configure
@@ -69,7 +68,6 @@ fi
 
 echo -n "Build amino with demos? (y/n) "
 read answer
-# install dependecies
 if [ "$answer" != "${answer#[Yy]}" ]; then
     cd $HOME
     if [ ! -d "baxter_common" ]; then
@@ -93,14 +91,12 @@ if [ "$answer" != "${answer#[Yy]}" ]; then
 
     echo -n "Open static demo? "
     read answer
-    # install dependecies
     if [ "$answer" != "${answer#[Yy]}" ]; then
         ./demo/urdf/baxter-simple
     fi
 
     echo -n "Open dynamic demo? "
     read answer
-    # install dependecies
     if [ "$answer" != "${answer#[Yy]}" ]; then
         ./demo/urdf/baxter-ompl-sequence
     fi
