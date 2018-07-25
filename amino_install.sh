@@ -65,21 +65,29 @@ function quicklispInstall {
 }
 
 function run {
-    echo -n $2
+    echo -n $1
     read answer
     if [ "$answer" != "${answer#[Yy]}" ]; then
-        $1
+        echo "$2 $3 $4"
+        $2 $3 $4
     fi
 }
 
 function installAmino {
     cd $HOME/amino
-    run ./configure "configure? (y/n)" $1
+    if [ "$1" != "${answer#[Yy]}" ]; then
+        echo "demos"
+        run  "configure? (y/n)" ./configure --enable-demos --enable-demo-baxter
+    else
+        echo "no demos"
+        run  "configure? (y/n)" ./configure
+    fi
     echo "Check to see if configured properly. Press any key to continue"
     read answer
     make
     sudo make install
     # uninstall "make uninstall
+
 }
 
 function runDemo {
@@ -102,11 +110,11 @@ if [ "$answer" != "${answer#[Yy]}" ]; then
         autotools-dev maxima libblas-dev liblapack-dev \
         libglew-dev libsdl2-dev libfcl-dev emacs \
         sbcl default-jdk blender flex povray ffmpeg \
-        coinor-libclp-dev libglpk-dev liblpsolve55-dev \
+        coinor-libclp-dev libglpk-dev liblpsolve55-dev
 fi
 
-run omplInstall "Build OMPL from source? (y/n) "
-run quicklispInstall "Install quickLisp? Be careful. If it is already installed it will not reinstall this way (y/n) "
+run  "Build OMPL from source? (y/n) " omplInstall
+run  "Install quickLisp? Be careful. If it is already installed it will not reinstall this way (y/n) " quicklispInstall
 
 echo -n "Update or clone amino's repo? (y/n) "
 read answer
@@ -123,13 +131,15 @@ if [ "$answer" != "${answer#[Yy]}" ]; then
     git submodule init && git submodule update && autoreconf -i
 fi
 
-run installAmino "Build amino without demos? (y/n) "
+run "Build amino without demos? (y/n) " installAmino n
+
+#fix this
 
 echo -n "Build amino with demos? (y/n) "
 read answer
 if [ "$answer" != "${answer#[Yy]}" ]; then
     cd $HOME
-    echo "update or clone baxter_common? (y/n) "
+    echo -n "update or clone baxter_common? (y/n) "
     read answer
     if [ "$answer" != "${answer#[Yy]}" ]; then
         if [ ! -d "baxter_common" ]; then
@@ -146,7 +156,7 @@ if [ "$answer" != "${answer#[Yy]}" ]; then
     ROS_PACKAGE_PATH=`pwd`/baxter_common
     export ROS_PACKAGE_PATH
 
-    installAmino --enable-demos --enable-demo-baxter
+    installAmino y
 
     runDemo "Open static demo? (y/n) " $HOME/amino/demo/urdf/baxter/baxter-simple
 
