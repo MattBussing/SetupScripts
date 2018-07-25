@@ -7,6 +7,7 @@ Can be run from anywhere
 installs all files at home
 Changed libav-tools to ffmpeg
 Compiled ompl from source
+emacs is currently a dependency
 
 ompl notes
 ./install-ompl-ubuntu.sh will install OMPL without Python bindings
@@ -99,9 +100,9 @@ if [ "$answer" != "${answer#[Yy]}" ]; then
     sudo apt-get -y install git gcc g++ make build-essential\
         gfortran autoconf automake libtool autoconf-archive \
         autotools-dev maxima libblas-dev liblapack-dev \
-        libglew-dev libsdl2-dev libfcl-dev \
+        libglew-dev libsdl2-dev libfcl-dev emacs \
         sbcl default-jdk blender flex povray ffmpeg \
-        coinor-libclp-dev libglpk-dev liblpsolve55-dev
+        coinor-libclp-dev libglpk-dev liblpsolve55-dev \
 fi
 
 run omplInstall "Build OMPL from source? (y/n) "
