@@ -30,7 +30,7 @@ function installPrograms {
     ask "Set up Chrome?" setupChrome
     ask "Set up Atom?" setupAtom
     sudo apt-get update
-    ask "Install General Programs?" installGeneralPrograms 
+    ask "Install General Programs?" installGeneralPrograms
     sudo snap install spotify
     ask "Install Postman?" installPostman
     ask "Install Inkscape?" installInkscape
@@ -63,7 +63,8 @@ function setupAtom {
     #atom repository setup
     curl -L https://packagecloud.io/AtomEditor/atom/gpgkey | sudo apt-key add -
     sudo sh -c 'echo "deb [arch=amd64] https://packagecloud.io/AtomEditor/atom/any/ any main" > /etc/apt/sources.list.d/atom.list'
-
+    apm install atom-beautify
+    #TODO update this to install atom
 }
 
 function gitSetup {
