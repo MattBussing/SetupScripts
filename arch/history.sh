@@ -42,3 +42,8 @@ export SCRIPTS="$HOME/documents/setup/"
 ln -s $SCRIPTS/.bashrc $HOME
 bash main.sh
 git clone https://github.com/MattBussing/SetupScripts.git
+
+sudo pacman -S  alsa-utils pulseaudio
+sudo pacman -S playerctl
+xmodmap -pke
+yaourt -S brillo #bakclight
