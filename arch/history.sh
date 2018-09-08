@@ -1,3 +1,5 @@
+<<'comment'
+
 yaourt -S atom gvfs kde-cli-tools  trash-cli xdg-utils
 #issues kdebase-runtime
 yaourt -S plasma-desktop
@@ -47,3 +49,8 @@ sudo pacman -S  alsa-utils pulseaudio
 sudo pacman -S playerctl
 xmodmap -pke
 yaourt -S brillo #bakclight
+comment
+#uninstall from running weird script
+yaourt -Rscn ghc-libs
+yaourt -S python-virtualenv
+virtualenv ENV
