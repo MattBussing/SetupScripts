@@ -54,3 +54,4 @@ comment
 yaourt -Rscn ghc-libs
 yaourt -S python-virtualenv
 virtualenv ENV
+sudo pacman -S gcc
