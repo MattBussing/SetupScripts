@@ -3,8 +3,8 @@
 
 DOTFILES="$HOME/documents/setup/SetupScripts/dotfiles"
 CONFIG="$HOME/.config"
-I3="i3/config"
-I3STATUS="i3status/config"
+I3="i3"
+I3STATUS="i3status"
 
 function ask {
     echo -n "$1 (y/n) "
@@ -15,13 +15,15 @@ function ask {
 }
 
 function linkDotFiles(){
-  # sets up a linked bashrc
-  ln -sf $DOTFILES/.bashrc $HOME
-  ln -sf $DOTFILES/i3/config $CONFIG/$I3
+  # sets up directory
   if [ ! -d $CONFIG/i3status ]; then
   mkdir $CONFIG/i3status
   fi
-  ln -sf $DOTFILES/i3Status/config $CONFIG/$I3STATUS
+
+  # sets up a linked config files
+  ln -sf $DOTFILES/.bashrc $HOME
+  ln -sf $DOTFILES/i3/config $CONFIG/$I3/
+  ln -sf $DOTFILES/i3status/config $CONFIG/$I3STATUS/
 }
 
 
