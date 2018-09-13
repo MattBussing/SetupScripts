@@ -55,3 +55,10 @@ yaourt -Rscn ghc-libs
 yaourt -S python-virtualenv
 virtualenv ENV
 sudo pacman -S gcc
+
+yaourt -Syu --aur
+yaourt -S thunar
+yaourt -Rscn plasma-desktop xfce4
+yaourt -S gnome-terminal
+yaourt -Rscn zsh
+yaourt -S spotifyd
