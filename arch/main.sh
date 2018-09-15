@@ -24,6 +24,7 @@ function linkDotFiles(){
   ln -sf $DOTFILES/.bashrc $HOME
   ln -sf $DOTFILES/i3/config $CONFIG/$I3/
   ln -sf $DOTFILES/i3status/config $CONFIG/$I3STATUS/
+  ln -sf $DOTFILEs/.profile $HOME
 }
 
 

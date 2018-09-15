@@ -18,3 +18,5 @@ changeDirectory(){
 alias cd='changeDirectory'
 hash -d sch=~/documents/School
 hash -d 423=~sch/423
+
+VISUAL="vim"

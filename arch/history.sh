@@ -62,3 +62,5 @@ yaourt -Rscn plasma-desktop xfce4
 yaourt -S gnome-terminal
 yaourt -Rscn zsh
 yaourt -S spotifyd
+apm install script atom-beautify
+yaourt -Rscn nano
