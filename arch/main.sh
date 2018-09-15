@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 # author: Matt Bussing
 
-DOTFILES="$HOME/documents/setup/SetupScripts/dotfiles"
+DOTFILES="$HOME/documents/git/SetupScripts/dotfiles"
 CONFIG="$HOME/.config"
 I3="i3"
 I3STATUS="i3status"
