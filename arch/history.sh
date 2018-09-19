@@ -64,3 +64,9 @@ yaourt -Rscn zsh
 yaourt -S spotifyd
 apm install script atom-beautify
 yaourt -Rscn nano
+yaourt -S base-devel opencv opencv-samples
+yaourt -S tk
+yaourt -S tk
+yaourt -S hdf5
+find / -name 'videocapture_starter.cpp' 2>/dev/null
+yaourt -S opencv-git

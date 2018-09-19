@@ -16,7 +16,9 @@ changeDirectory(){
 }
 
 alias cd='changeDirectory'
-hash -d sch=~/documents/School
-hash -d 423=~sch/423
 
 VISUAL="vim"
+EDITOR="atom"
+
+alias sch='cd ~/documents/School'
+alias act='source ENV/bin/activate'
