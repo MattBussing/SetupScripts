@@ -3,3 +3,6 @@
 ## General Tips:
   - `bash main.sh` to have generic setup
   - `bash amino_install.sh` to install amino (http://amino.golems.org/installation.html)
+
+## Arch Setup
+  - This uses this package to sync onedrive: https://github.com/abraunegg/onedrive

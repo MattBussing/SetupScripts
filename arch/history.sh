@@ -70,4 +70,3 @@ yaourt -S tk
 yaourt -S hdf5
 find / -name 'videocapture_starter.cpp' 2>/dev/null
 yaourt -S opencv-git
-yaourt -S onedrive-abraunegg-git 

@@ -31,7 +31,6 @@ function linkDotFiles(){
   ln -sf $DOTFILES/onedrive/config $CONFIG/onedrive
 }
 
-
 function gitSetup {
     echo "git setup, assuming you want to store your password"
     echo "enter your email: "
@@ -44,7 +43,18 @@ function gitSetup {
     git config --global core.editor "vim"
 }
 
+function synchronizeD {
+    echo "Syncing Onedrive"
+    onedrive --synchronize
+}
+
+function installD {
+    echo "Installing OneDrive"
+    yaourt -S onedrive-abraunegg-git
+}
 
 
 ask "set up git?" gitSetup
 ask "link dot files" linkDotFiles
+ask "Install Onedrive?" installD
+ask "Synchronize Onedrive?" synchronizeD
