@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 # author: Matt Bussing
 
-DOTFILES="$HOME/documents/git/SetupScripts/dotfiles"
+DOTFILES="$HOME/git/SetupScripts/dotfiles"
 CONFIG="$HOME/.config"
 I3="i3"
 I3STATUS="i3status"
@@ -19,12 +19,16 @@ function linkDotFiles(){
   if [ ! -d $CONFIG/i3status ]; then
   mkdir $CONFIG/i3status
   fi
+  if [ ! -d $CONFIG/onedrive ]; then
+  mkdir $CONFIG/onedrive
+  fi
 
   # sets up a linked config files
   ln -sf $DOTFILES/.bashrc $HOME
   ln -sf $DOTFILES/i3/config $CONFIG/$I3/
   ln -sf $DOTFILES/i3status/config $CONFIG/$I3STATUS/
-  ln -sf $DOTFILEs/.profile $HOME
+  ln -sf $DOTFILES/.profile $HOME
+  ln -sf $DOTFILES/onedrive/config $CONFIG/onedrive
 }
 
 
