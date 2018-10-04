@@ -2,5 +2,6 @@
 sync_dir = "~/documents"
 # Skip files and directories that match this pattern
 skip_file = ".*|~*"
+skip_file = ".*|~*|School/ENV"
 # Wait time (seconds) between sync operations in monitor mode
 monitor_interval = "45"

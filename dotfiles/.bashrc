@@ -7,7 +7,7 @@
 
 alias ls='ls --color=auto'
 PS1='[\u@\h \W]\$ '
-alias vpn='sudo openvpn --config client.ovpn'
+alias vpn='sudo openvpn --config ~/client.ovpn '
 
 # sets cd to change and list the directory
 changeDirectory(){
@@ -16,9 +16,11 @@ changeDirectory(){
 }
 
 alias cd='changeDirectory'
+export EDITOR="atom"
+export VISUAL=EDITOR
+export UNCRUSTIFY_CONFIG="/home/matt/git/SetupScripts/dotfiles/ben.cfg"
 
-VISUAL="vim"
-EDITOR="atom"
+
 
 alias sch='cd ~/documents/School'
 alias act='source ENV/bin/activate'

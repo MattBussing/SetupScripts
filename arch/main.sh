@@ -5,6 +5,7 @@ DOTFILES="$HOME/git/SetupScripts/dotfiles"
 CONFIG="$HOME/.config"
 I3="i3"
 I3STATUS="i3status"
+ATOM="$HOME/.atom"
 
 function ask {
     echo -n "$1 (y/n) "
@@ -29,6 +30,7 @@ function linkDotFiles(){
   ln -sf $DOTFILES/i3status/config $CONFIG/$I3STATUS/
   ln -sf $DOTFILES/.profile $HOME
   ln -sf $DOTFILES/onedrive/config $CONFIG/onedrive
+  ln -sf $DOTFILES/config.cson $ATOM
 }
 
 function gitSetup {

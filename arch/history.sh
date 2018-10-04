@@ -70,3 +70,10 @@ yaourt -S tk
 yaourt -S hdf5
 find / -name 'videocapture_starter.cpp' 2>/dev/null
 yaourt -S opencv-git
+systemctl --user enable onedrive
+systemctl --user start onedrive
+yaourt -S gdb
+yaourt -S ristretto
+yaourt -S tumbler
+yaourt -S imagemagick
+yaourt -S uncrustify

@@ -1,0 +1,17 @@
+"*":
+  "atom-beautify":
+    cpp:
+      beautify_on_save: true
+      configPath: "/home/matt/git/SetupScripts/dotfiles/ben.cfg"
+    html:
+      beautify_on_save: true
+    js:
+      beautify_on_save: true
+  core:
+    telemetryConsent: "no"
+  editor:
+    fontSize: 16
+  "exception-reporting":
+    userId: "d299bb68-975e-4be7-bbed-7d9497eb4395"
+  welcome:
+    showOnStartup: false
