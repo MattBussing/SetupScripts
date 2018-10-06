@@ -15,9 +15,17 @@ changeDirectory(){
   ls ./
 }
 
+wmv2avi(){
+  for file in *.wmv;do
+  f=${file%.wmv};
+  ffmpeg -i $file $f.avi;
+  rm $file;
+  done
+}
+
 alias cd='changeDirectory'
 export EDITOR="atom"
-export VISUAL=EDITOR
+export VISUAL=$EDITOR
 export UNCRUSTIFY_CONFIG="/home/matt/git/SetupScripts/dotfiles/ben.cfg"
 
 

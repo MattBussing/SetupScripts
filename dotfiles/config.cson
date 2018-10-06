@@ -9,8 +9,7 @@
       beautify_on_save: true
   core:
     telemetryConsent: "no"
-  editor:
-    fontSize: 16
+  editor: {}
   "exception-reporting":
     userId: "d299bb68-975e-4be7-bbed-7d9497eb4395"
   welcome:
