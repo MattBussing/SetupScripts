@@ -189,8 +189,11 @@ bindsym XF86AudioPause exec playerctl pause
 bindsym XF86AudioNext exec playerctl next
 bindsym XF86AudioPrev exec playerctl previous
 
-#i3lock
+# i3lock
 bindsym $MOD+apostrophe exec i3lock
 
-#thunar
+# thunar
 bindsym $MOD+t exec thunar
+
+# google
+bindsym $MOD+g exec google-chrome-stable
