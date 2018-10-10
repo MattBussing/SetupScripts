@@ -77,3 +77,5 @@ yaourt -S ristretto
 yaourt -S tumbler
 yaourt -S imagemagick
 yaourt -S uncrustify
+yaourt -S ctags 
+yaourt -S ctags for atom
