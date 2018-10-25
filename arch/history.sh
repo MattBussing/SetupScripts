@@ -79,3 +79,4 @@ yaourt -S imagemagick
 yaourt -S uncrustify
 yaourt -S ctags 
 yaourt -S ctags for atom
+yaourt -S libva-intel-driver for vlc player

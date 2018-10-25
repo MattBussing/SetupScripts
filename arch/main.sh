@@ -23,6 +23,9 @@ function linkDotFiles(){
   if [ ! -d $CONFIG/onedrive ]; then
   mkdir $CONFIG/onedrive
   fi
+  if [ ! -d $CONFIG/i3blocks ]; then
+  mkdir $CONFIG/i3blocks
+  fi
 
   # sets up a linked config files
   ln -sf $DOTFILES/.bashrc $HOME
@@ -31,6 +34,10 @@ function linkDotFiles(){
   ln -sf $DOTFILES/.profile $HOME
   ln -sf $DOTFILES/onedrive/config $CONFIG/onedrive
   ln -sf $DOTFILES/config.cson $ATOM
+  ln -sf $DOTFILES/i3blocks/config $CONFIG/i3blocks/
+  ln -sf $DOTFILES/.xinitrc $HOME
+  ln -sf $DOTFILES/.xserverrc $HOME
+  ln -sf $DOTFILES/.bash_profile $HOME
 }
 
 function gitSetup {

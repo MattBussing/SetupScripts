@@ -7,15 +7,14 @@
       beautify_on_save: true
     js:
       beautify_on_save: true
+    python:
+      beautify_on_save: true
+      sort_imports: true
   core:
     disabledPackages: [
       "linter-js-standard"
     ]
     telemetryConsent: "no"
-    themes: [
-      "one-light-ui"
-      "atom-material-syntax-light"
-    ]
   editor: {}
   "exception-reporting":
     userId: "d299bb68-975e-4be7-bbed-7d9497eb4395"
@@ -23,6 +22,5 @@
     style: "semistandard"
   "linter-ui-default":
     panelHeight: 254
-    showPanel: true
   welcome:
     showOnStartup: false
