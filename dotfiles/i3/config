@@ -198,3 +198,6 @@ bindsym $MOD+t exec thunar
 
 # google
 bindsym $MOD+g exec google-chrome-stable
+
+# firefox / browser
+bindsym $MOD+b exec firefox 
