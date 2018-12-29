@@ -30,5 +30,21 @@ export UNCRUSTIFY_CONFIG="/home/matt/git/SetupScripts/dotfiles/ben.cfg"
 
 
 
-alias sch='cd ~/documents/School'
+alias sch='cd ~/Documents/School'
 alias act='source ENV/bin/activate'
+
+export VLFEATROOT='/home/matt/src/'
+
+updateLuna(){
+	scp -r ~/Documents/School/445/main/* mbussing@luna.mines.edu:/var/www/html/fall_2018/mbussing/
+}
+final(){
+	scp -r ~/Documents/School/445/final_project/* mbussing@luna.mines.edu:/var/www/html/fall_2018/mbussing/final_project/
+}
+sendLuna(){
+	scp  $1 mbussing@luna.mines.edu:/var/www/html/fall_2018/mbussing/$1
+}
+
+connectLuna(){
+	ssh mbussing@luna.mines.edu
+}

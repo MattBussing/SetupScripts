@@ -1,12 +1,10 @@
 "*":
   "atom-beautify":
     cpp:
-      beautify_on_save: true
-      configPath: "/home/matt/git/SetupScripts/dotfiles/ben.cfg"
+      configPath: "/home/matt/git/SetupScripts/dotfiles/default.cfg"
     html:
       beautify_on_save: true
-    js:
-      beautify_on_save: true
+    js: {}
     python:
       beautify_on_save: true
       sort_imports: true
@@ -21,6 +19,8 @@
   "linter-js-standard":
     style: "semistandard"
   "linter-ui-default":
-    panelHeight: 254
+    panelHeight: 4
+    showPanel: true
+  "php-cs-fixer": {}
   welcome:
     showOnStartup: false
