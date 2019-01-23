@@ -9,3 +9,6 @@ yay -S google-chrome
 yay -S dmenu2
 ln /home/matt/git/SetupScripts/history.txt history
 yay -S atom
+yay -S thunar
+yay -S gvfs xfce4-panel tumbler thunar-volman thunar-archive-plugin thunar-media-tags-plugin
+yay -S atril
