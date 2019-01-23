@@ -1,0 +1,11 @@
+sudo pacman -S wget
+wget https://github.com/Jguer/yay/archive/v9.1.0.tar.gz
+wget https://aur.archlinux.org/cgit/aur.git/snapshot/yay.tar.gz
+sudo pacman -S base-devel
+makepkg -si
+cd yay
+git clone https://aur.archlinux.org/yay.git
+yay -S google-chrome
+yay -S dmenu2
+ln /home/matt/git/SetupScripts/history.txt history
+yay -S atom

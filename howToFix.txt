@@ -1,0 +1,1 @@
+I fixed i3's poor text with setting /etc/locale.conf with language and lc_all
