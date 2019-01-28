@@ -1,5 +1,0 @@
-sudo pacman -S xorg-server xorg-xinit
-pacman -S i3
-pacman -S terminator
-pacman -S terminator
-pacman -S firefox

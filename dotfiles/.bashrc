@@ -24,7 +24,7 @@ wmv2avi(){
 }
 
 alias cd='changeDirectory'
-export EDITOR="atom"
+export EDITOR="vim"
 export VISUAL=$EDITOR
 export UNCRUSTIFY_CONFIG="/home/matt/git/SetupScripts/dotfiles/ben.cfg"
 

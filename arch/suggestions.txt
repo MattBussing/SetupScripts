@@ -1,1 +1,0 @@
-guvcview is good for video camera

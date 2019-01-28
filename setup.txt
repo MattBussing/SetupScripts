@@ -1,1 +1,0 @@
-run xinit i3 after installing i3-wm

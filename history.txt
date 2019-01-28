@@ -2,8 +2,8 @@ sudo pacman -S wget
 wget https://github.com/Jguer/yay/archive/v9.1.0.tar.gz
 wget https://aur.archlinux.org/cgit/aur.git/snapshot/yay.tar.gz
 sudo pacman -S base-devel
-makepkg -si
 cd yay
+makepkg -si
 git clone https://aur.archlinux.org/yay.git
 yay -S google-chrome
 yay -S dmenu2
@@ -12,3 +12,10 @@ yay -S atom
 yay -S thunar
 yay -S gvfs xfce4-panel tumbler thunar-volman thunar-archive-plugin thunar-media-tags-plugin
 yay -S atril
+yay -S ttf-dejavu ttf-liberation noto-fonts
+yay -S hicolor-icon-theme
+sudo pacman -S xorg-server xorg-xinit
+pacman -S i3
+pacman -S terminator
+pacman -S firefox
+sudo pacman -S git
