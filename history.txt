@@ -21,3 +21,7 @@ pacman -S firefox
 sudo pacman -S git
 yay -S android-studio
 netctl start school
+yay -S spotify
+yay -S pavucontrol
+yay -S pulseaudio
+yay -S i3lock
