@@ -6,5 +6,6 @@ guvcview is good for video camera
  -
 
  #Todo
-  - fix network
-   - connman / netctl get gui for wifi 
+ - fix network
+  - connman / netctl get gui for wifi
+ - set up backup script / pi
