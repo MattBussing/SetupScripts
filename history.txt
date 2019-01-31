@@ -25,3 +25,9 @@ yay -S spotify
 yay -S pavucontrol
 yay -S pulseaudio
 yay -S i3lock
+yay -S openvpn
+yay -S nm-connection-editor
+yay -S networkmanager
+sudo systemctl enable NetworkManager
+sudo systemctl start NetworkManager
+ln git/SetupScripts/arch/help.md help

@@ -10,7 +10,8 @@
 - video output lxrandr
   - https://www.maketecheasier.com/setup-hdmi-digital-playback-in-linux/
 - guvcview is good for video camera
-- netctl: wifi
+- netctl: for initial wifi setup
+- nmtui and Network Manager: general wifi
 
 #Todo
 - fix network
