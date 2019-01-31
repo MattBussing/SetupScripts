@@ -31,3 +31,4 @@ yay -S networkmanager
 sudo systemctl enable NetworkManager
 sudo systemctl start NetworkManager
 ln git/SetupScripts/arch/help.md help
+yay -S light
