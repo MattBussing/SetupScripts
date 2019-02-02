@@ -23,6 +23,9 @@ connect440(){
 	ssh mbussing@eecs-hpc-1.mines.edu
 }
 
+copyHw(){
+	scp -r ~/Documents/School/440/hw/ mbussing@eecs-hpc-1.mines.edu:/home/mbussing/
+}
 
 alias sch='cd ~/Documents/School'
 alias act='source ENV/bin/activate'
