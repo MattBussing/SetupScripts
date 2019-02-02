@@ -13,7 +13,8 @@
       "linter-js-standard"
     ]
     telemetryConsent: "no"
-  editor: {}
+  editor:
+    fontSize: 15
   "exception-reporting":
     userId: "d299bb68-975e-4be7-bbed-7d9497eb4395"
   "linter-js-standard":

@@ -32,3 +32,11 @@ sudo systemctl enable NetworkManager
 sudo systemctl start NetworkManager
 ln git/SetupScripts/arch/help.md help
 yay -S light
+yay -S ttf-font-awesome-4 ttf-inconsolata ttf-iosevka ttf-iosevka-term ttf-liberation ttf-linux-libertine ttf-ms-fonts ttf-opensans noto-fonts noto-fonts-emoji otf-font-awesome-4
+apm install atom-beautify
+yay -S python-pip
+sudo pip install --upgrade autopep8
+sudo pip install isort
+sudo pip uninstall autopep8
+sudo pip install autopep8
+yay -Rsn network-manager-applet
