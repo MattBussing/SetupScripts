@@ -40,3 +40,4 @@ sudo pip install isort
 sudo pip uninstall autopep8
 sudo pip install autopep8
 yay -Rsn network-manager-applet
+yay -S openssh

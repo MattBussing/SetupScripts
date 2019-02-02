@@ -14,6 +14,4 @@
 - nmtui and Network Manager: general wifi
 
 #Todo
-- fix network
-  - connman / netctl get gui for wifi
 - set up backup script / pi
