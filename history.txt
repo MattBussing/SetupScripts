@@ -41,3 +41,18 @@ sudo pip uninstall autopep8
 sudo pip install autopep8
 yay -Rsn network-manager-applet
 yay -S openssh
+yay -S htop
+yay -S zip unzip
+yay -S feh
+yay -S libreoffice
+yay -Rscn libnm-gtk
+yay -S lxrandr
+yay -S engrampa
+sudo pip install pytest
+sudo pip install pylama pylama-pylint
+apm install linter-python
+apm install linter
+apm install linter-pycodestyle
+apm installl linter-ui-default intentions busy-signal
+yay -S rust
+yay -S sshfs

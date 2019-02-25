@@ -19,8 +19,18 @@ alias cd='changeDirectory'
 
 alias vpn='sudo openvpn --config ~/.client.ovpn '
 
+disconnect(){
+  sudo umount -f ~/rdev/remote
+}
+
 connect440(){
-	ssh mbussing@eecs-hpc-1.mines.edu
+  disconnect;
+  sshfs mbussing@eecs-hpc-1.mines.edu:/home/mbussing/ ~/rdev/remote/;
+  atom ~/rdev
+}
+
+ssh440(){
+  ssh mbussing@eecs-hpc-1.mines.edu
 }
 
 copyHw(){

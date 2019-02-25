@@ -13,15 +13,15 @@
       "linter-js-standard"
     ]
     telemetryConsent: "no"
-  editor:
-    fontSize: 15
+  editor: {}
   "exception-reporting":
     userId: "d299bb68-975e-4be7-bbed-7d9497eb4395"
   "linter-js-standard":
     style: "semistandard"
   "linter-ui-default":
     panelHeight: 4
-    showPanel: true
   "php-cs-fixer": {}
+  "tree-view":
+    hideVcsIgnoredFiles: true
   welcome:
     showOnStartup: false
