@@ -56,3 +56,4 @@ apm install linter-pycodestyle
 apm installl linter-ui-default intentions busy-signal
 yay -S rust
 yay -S sshfs
+yay -S uncrustify

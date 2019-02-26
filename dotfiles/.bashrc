@@ -19,16 +19,17 @@ alias cd='changeDirectory'
 alias vpn='sudo openvpn --config ~/.client.ovpn '
 
 disconnect(){
-  sudo umount -f ~/rdev/remote
+	cp -r /rdev/hw/ ~/Documents/backup/hw
+  sudo umount -f ~/rdev/remote/hw/
 }
 
 sshfs440(){
 	# do not use sudo, it messes with the user
-	sshfs mbussing@eecs-hpc-1.mines.edu:/home/mbussing/ ~/rdev/remote/;
+	sshfs mbussing@eecs-hpc-1.mines.edu:/home/mbussing/hw/ ~/rdev/hw/
 }
 
 atom440(){
-  atom ~/rdev
+  atom ~/rdev/hw
 }
 
 ssh440(){
