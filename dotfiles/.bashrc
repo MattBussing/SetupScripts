@@ -23,7 +23,8 @@ disconnect(){
 }
 
 sshfs440(){
-  sshfs mbussing@eecs-hpc-1.mines.edu:/home/mbussing/ ~/rdev/remote/;
+	# do not use sudo, it messes with the user
+	sshfs mbussing@eecs-hpc-1.mines.edu:/home/mbussing/ ~/rdev/remote/;
 }
 
 atom440(){
