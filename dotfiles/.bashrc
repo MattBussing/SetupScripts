@@ -16,16 +16,17 @@ changeDirectory(){
 }
 alias cd='changeDirectory'
 
-
 alias vpn='sudo openvpn --config ~/.client.ovpn '
 
 disconnect(){
   sudo umount -f ~/rdev/remote
 }
 
-connect440(){
-  disconnect;
+sshfs440(){
   sshfs mbussing@eecs-hpc-1.mines.edu:/home/mbussing/ ~/rdev/remote/;
+}
+
+atom440(){
   atom ~/rdev
 }
 
