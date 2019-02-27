@@ -19,8 +19,11 @@ alias cd='changeDirectory'
 alias vpn='sudo openvpn --config ~/.client.ovpn '
 
 disconnect(){
-	cp -r /rdev/hw/ ~/Documents/backup/hw
-  sudo umount -f ~/rdev/remote/hw/
+  sudo umount -f ~/rdev/hw/
+}
+
+backup440(){
+	cp -r ~/rdev/hw/ ~/Documents/backup/hw
 }
 
 sshfs440(){
@@ -29,7 +32,7 @@ sshfs440(){
 }
 
 atom440(){
-  atom ~/rdev/hw
+  atom ~/rdev
 }
 
 ssh440(){
