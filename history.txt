@@ -57,3 +57,6 @@ apm installl linter-ui-default intentions busy-signal
 yay -S rust
 yay -S sshfs
 yay -S uncrustify
+yay -S noto-fonts
+apm install linter-flake8
+yay -S ctags

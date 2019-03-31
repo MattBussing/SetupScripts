@@ -19,28 +19,45 @@ alias cd='changeDirectory'
 alias vpn='sudo openvpn --config ~/.client.ovpn '
 
 disconnect(){
-  sudo umount -f ~/rdev/hw/
+  sudo umount -f ~/remote/hw/
 }
 
 backup440(){
-	cp -r ~/rdev/hw/ ~/Documents/backup/hw
+  rm -rf ~/Documents/backup/hw
+  cp -r ~/remote/hw/ ~/Documents/backup/
 }
 
 sshfs440(){
-	# do not use sudo, it messes with the user
-	sshfs mbussing@eecs-hpc-1.mines.edu:/home/mbussing/hw/ ~/rdev/hw/
+  # do not use sudo, it messes with the user
+  sshfs mbussing@eecs-hpc-1.mines.edu:/home/mbussing/hw/ ~/remote/hw/
+}
+
+sshfsPi(){
+  # do not use sudo, it messes with the user
+  sshfs pi@192.168.1.14:/home/pi/DistancePi/ ~/remote/DistancePi/
+}
+
+sshPi(){
+  # do not use sudo, it messes with the user
+  ssh pi@192.168.1.14
 }
 
 atom440(){
-  atom ~/rdev
+  atom ~/remote
 }
 
 ssh440(){
   ssh mbussing@eecs-hpc-1.mines.edu
 }
 
+start(){
+  sshfs440;
+  atom440;
+  ssh440;
+}
+
 copyHw(){
-	scp -r ~/Documents/School/440/hw/ mbussing@eecs-hpc-1.mines.edu:/home/mbussing/
+  scp -r ~/Documents/School/440/hw/ mbussing@eecs-hpc-1.mines.edu:/home/mbussing/
 }
 
 alias sch='cd ~/Documents/School'
