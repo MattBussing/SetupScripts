@@ -16,7 +16,8 @@ changeDirectory(){
 }
 alias cd='changeDirectory'
 
-alias vpn='sudo openvpn --config ~/.client.ovpn '
+# alias vpn='sudo openvpn --config ~/.client.ovpn '
+alias vpn='sudo openvpn --config ~/.client.ovpn --daemon'
 
 disconnect(){
   sudo umount -f ~/remote/hw/
@@ -62,6 +63,9 @@ copyHw(){
 
 alias sch='cd ~/Documents/School'
 alias act='source ENV/bin/activate'
+
+# for python pip modules
+export PATH="$PATH:$HOME/.local/bin"
 
 #export VLFEATROOT='/home/matt/src/'
 #export UNCRUSTIFY_CONFIG="/home/matt/git/SetupScripts/dotfiles/ben.cfg"

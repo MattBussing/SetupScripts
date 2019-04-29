@@ -60,3 +60,9 @@ yay -S uncrustify
 yay -S noto-fonts
 apm install linter-flake8
 yay -S ctags
+install linter-gcc for atom
+yay -S cups
+sudo systemctl enable org.cups.cupsd.service
+sudo systemctl start avahi-daemon.service
+sudo systemctl start avahi-daemon.service
+feh --randomize --bg-fill ~/documents/photos/background/*
